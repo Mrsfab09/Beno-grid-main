@@ -1,95 +1,85 @@
-// import { Container } from "./components/Container/Container";
-import Image from "next/image";
+import { Item } from "./components/Item/Item";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.item}>
-        <div className="lgText">
-          Create and schedule content <em>quicker.</em>
-        </div>
-        <Image
-          src="/assets/images/illustration-create-post.webp"
-          width={500}
-          height={500}
-          alt="Create post"
-        ></Image>
-      </div>
-      <div className={styles.item}>
-        <p className="xlgText">
-          Social Media <span className={styles.emphasis}>10x</span>
-          <em>Faster</em>with AI
-        </p>
-        <Image
-          src="/assets/images/illustration-five-stars.webp"
-          width={500}
-          height={200}
-          alt=""
-        ></Image>
-        <p className="smText">Over 4,000 5-star reviews</p>
-      </div>
-      <div className={styles.item}>
-        <p className="lgText">Shedule to social media.</p>
-        <Image
-          src="/assets/images/illustration-schedule-posts.webp"
-          width={500}
-          height={500}
-          alt=""
-        ></Image>
-        <p className="smText">
-          Optimize post timings to publish content at the perfect time for your
-          audience.
-        </p>
-      </div>
-      <div className={styles.item}>
-        <p className="lgText">Write your content using AI</p>
-        <Image
-          src="/assets/images/illustration-ai-content.webp"
-          width={500}
-          height={200}
-          alt=""
-        ></Image>
-      </div>
-      <div className={styles.item}>
-        <Image
-          src="/assets/images/illustration-multiple-platforms.webp"
-          width={500}
-          height={200}
-          alt=""
-        ></Image>
-        <p className="medText">Manage multiple accounts and platforms.</p>
-      </div>
-      <div className={styles.item}>
-        <p className="medText">Maintain a consistent posting schedule.</p>
-        <Image
-          src="/assets/images/illustration-consistent-schedule.webp"
-          width={500}
-          height={200}
-          alt=""
-        ></Image>
-      </div>
-      <div className={styles.item}>
-        <p className="smText">
-          <span className="xlgText">56%</span>
-          faster audience growth
-        </p>
-        <Image
-          src="/assets/images/illustration-audience-growth.webp"
-          width={500}
-          height={200}
-          alt=""
-        ></Image>
-      </div>
-      <div className={styles.item}>
-        <Image
-          src="/assets/images/illustration-grow-followers.webp"
-          width={500}
-          height={200}
-          alt=""
-        ></Image>
-        <p className="lgText">Grow followers with non-stop content.</p>
-      </div>
+      <Item
+        title="Create and schedule content quicker."
+        imageSrc="/assets/images/illustration-create-post.webp"
+        imageAlt="Create post"
+        imageWidth={230}
+        imageHeight={110}
+        subtitle=""
+      />
+      <Item
+        imageAlt=""
+        title=""
+        subtitle={
+          <p className="xlgText">
+            Social Media <span className={styles.emphasis}>10x </span>
+            <em>Faster</em> with AI
+          </p>
+        }
+        imageSrc="/assets/images/illustration-five-stars.webp"
+        imageWidth={250}
+        imageHeight={40}
+      />
+      <Item
+        title="Schedule to social media."
+        imageSrc="/assets/images/illustration-schedule-posts.webp"
+        imageWidth={350}
+        imageHeight={410}
+        imageAlt=""
+        subtitle="Optimize post timings to publish content at the perfect time for your audience."
+      />
+      <Item
+        title="Write your content using AI"
+        imageSrc="/assets/images/illustration-ai-content.webp"
+        imageWidth={400}
+        imageHeight={300}
+        imageAlt=""
+      />
+      <Item
+        title=""
+        imageSrc="/assets/images/illustration-multiple-platforms.webp"
+        imageWidth={800}
+        imageHeight={80}
+        subtitle={
+          <p className="medText">Manage multiple accounts and platforms.</p>
+        }
+        imageAlt=""
+      />
+      <Item
+        title=""
+        imageSrc="/assets/images/illustration-consistent-schedule.webp"
+        imageWidth={400}
+        imageHeight={200}
+        subtitle={
+          <p className="medText">Maintain a consistent posting schedule.</p>
+        }
+        imageAlt=""
+      />
+      <Item
+        title=""
+        subtitle={
+          <>
+            <span className="xlgText">56%</span>
+            faster audience growth
+          </>
+        }
+        imageSrc="/assets/images/illustration-audience-growth.webp"
+        imageWidth={400}
+        imageHeight={110}
+        imageAlt=""
+      />
+      <Item
+        imageAlt=""
+        imageSrc="/assets/images/illustration-grow-followers.webp"
+        imageWidth={400}
+        imageHeight={250}
+        title="Grow followers with non-stop content."
+      />
     </div>
   );
 }
