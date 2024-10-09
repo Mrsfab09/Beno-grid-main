@@ -3,12 +3,13 @@ import styles from "../../page.module.css";
 import { ReactNode } from "react";
 
 interface ItemProps {
-  title: string;
+  title?: ReactNode;
   subtitle?: ReactNode;
   imageSrc: string;
   imageAlt: string;
   imageWidth: number;
   imageHeight: number;
+  imagePosition?: "top" | "bottom";
 }
 
 export function Item({
@@ -18,17 +19,28 @@ export function Item({
   imageAlt,
   imageWidth,
   imageHeight,
+  imagePosition = "bottom",
 }: ItemProps) {
   return (
     <div className={styles.item}>
+      {imagePosition === "top" && (
+        <Image
+          src={imageSrc}
+          width={imageWidth}
+          height={imageHeight}
+          alt={imageAlt}
+        />
+      )}
       {title && <div className="lgText">{title}</div>}
       {subtitle && <p className="xlgText">{subtitle}</p>}
-      <Image
-        src={imageSrc}
-        width={imageWidth}
-        height={imageHeight}
-        alt={imageAlt}
-      />
+      {imagePosition === "bottom" && (
+        <Image
+          src={imageSrc}
+          width={imageWidth}
+          height={imageHeight}
+          alt={imageAlt}
+        />
+      )}
     </div>
   );
 }

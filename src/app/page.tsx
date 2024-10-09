@@ -5,40 +5,48 @@ export default function Home() {
   return (
     <div className={styles.wrapper}>
       <Item
-        title="Create and schedule content quicker."
-        imageSrc="/assets/images/illustration-create-post.webp"
-        imageAlt="Create post"
+        title={
+          <p className="lgText">
+            Create and schedule content <em>quicker.</em>
+          </p>
+        }
         imageWidth={230}
         imageHeight={110}
-        subtitle=""
+        imageSrc="/assets/images/illustration-create-post.webp"
+        imageAlt="Create post"
       />
       <Item
-        imageAlt=""
-        title=""
-        subtitle={
+        title={
           <p className="xlgText">
             Social Media <span className={styles.emphasis}>10x </span>
             <em>Faster</em> with AI
           </p>
         }
+        subtitle={<p className="smText">Over 4,000 5-star reviews</p>}
         imageSrc="/assets/images/illustration-five-stars.webp"
         imageWidth={250}
         imageHeight={40}
+        imageAlt="illustration-five-stars"
       />
       <Item
         title="Schedule to social media."
+        subtitle={
+          <p className="smText">
+            Optimize post timings to publish content at the perfect time for
+            your audience.
+          </p>
+        }
         imageSrc="/assets/images/illustration-schedule-posts.webp"
         imageWidth={350}
         imageHeight={410}
-        imageAlt=""
-        subtitle="Optimize post timings to publish content at the perfect time for your audience."
+        imageAlt="illustration-schedule-posts"
       />
       <Item
         title="Write your content using AI"
         imageSrc="/assets/images/illustration-ai-content.webp"
         imageWidth={400}
         imageHeight={300}
-        imageAlt=""
+        imageAlt="illustration-ai-content"
       />
       <Item
         title=""
@@ -48,37 +56,38 @@ export default function Home() {
         subtitle={
           <p className="medText">Manage multiple accounts and platforms.</p>
         }
-        imageAlt=""
+        imagePosition="top"
+        imageAlt="illustration-multiple-platforms"
       />
       <Item
         title=""
-        imageSrc="/assets/images/illustration-consistent-schedule.webp"
-        imageWidth={400}
-        imageHeight={200}
         subtitle={
           <p className="medText">Maintain a consistent posting schedule.</p>
         }
-        imageAlt=""
+        imageSrc="/assets/images/illustration-consistent-schedule.webp"
+        imageWidth={400}
+        imageHeight={200}
+        imageAlt="illustration-consistent-schedule"
       />
       <Item
         title=""
         subtitle={
           <>
-            <span className="xlgText">56%</span>
-            faster audience growth
+            <span className="xlgText">{">"}56%</span>
+            <p className="smText">faster audience growth</p>
           </>
         }
         imageSrc="/assets/images/illustration-audience-growth.webp"
         imageWidth={400}
         imageHeight={110}
-        imageAlt=""
+        imageAlt="illustration-audience-growth"
       />
       <Item
-        imageAlt=""
+        title="Grow followers with non-stop content."
         imageSrc="/assets/images/illustration-grow-followers.webp"
         imageWidth={400}
         imageHeight={250}
-        title="Grow followers with non-stop content."
+        imageAlt="illustration-grow-followers"
       />
     </div>
   );

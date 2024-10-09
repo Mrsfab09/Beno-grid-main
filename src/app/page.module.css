@@ -74,6 +74,10 @@
 .wrapper .item:nth-child(4) p {
   margin-bottom: 2rem;
 }
+.wrapper .item:nth-child(4) img {
+  height: 300px;
+  margin-top: 10px;
+}
 /* ----------------------------------- */
 .wrapper .item:nth-child(5) {
   grid-area: box5;
@@ -186,7 +190,7 @@
     font-size: 2.5rem;
   }
   .wrapper .item:nth-child(1) img {
-    width: 250px;
+    width: 230px;
   }
   .wrapper .item:nth-child(3) img {
     margin: 1rem 0;
@@ -204,6 +208,15 @@
   }
   .wrapper .item:nth-child(8) p {
     font-size: 2rem;
+  }
+  .wrapper .item:nth-child(8) img {
+    width: 400px;
+  }
+  .wrapper .item:nth-child(7) img {
+    width: 300px;
+  }
+  .wrapper .item:nth-child(4) img {
+    margin-top: 20px;
   }
 }
 @media (max-width: 540px) {
